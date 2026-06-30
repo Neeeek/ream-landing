@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ream — Private PDF Toolkit</title>
+    <meta
+      name="description"
+      content="Merge, split, compress, convert and OCR PDFs locally. Files never leave your device. No account, no watermarks, no uploads."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#eef2ff",
+                100: "#e0e7ff",
+                500: "#6366f1",
+                600: "#4f46e5",
+                700: "#4338ca",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white text-gray-900 antialiased">
+    <!-- Nav -->
+    <header class="border-b border-gray-100">
+      <div
+        class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4"
+      >
+        <span class="text-xl font-bold tracking-tight">Ream</span>
+        <nav class="flex items-center gap-6">
+          <a
+            href="privacy.html"
+            class="text-sm text-gray-500 hover:text-gray-900"
+            >Privacy</a
+          >
+          <a
+            href="#"
+            class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700"
+          >
+            Add to Chrome — free
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="mx-auto max-w-5xl px-6 py-24 text-center">
+      <div
+        class="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-100 bg-brand-50 px-4 py-1.5 text-sm font-medium text-brand-600"
+      >
+        <svg
+          class="h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+          />
+        </svg>
+        Files never leave your device
+      </div>
+
+      <h1 class="mb-6 text-5xl font-bold tracking-tight text-gray-900">
+        PDF tools that stay<br />on your device.
+      </h1>
+      <p class="mx-auto mb-10 max-w-xl text-lg text-gray-500">
+        Merge, split, compress, convert and OCR — all in your browser using
+        WebAssembly. No uploads. No account. No watermarks. Works offline.
+      </p>
+
+      <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a
+          href="#"
+          class="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-brand-700"
+        >
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"
+            />
+          </svg>
+          Add to Chrome — it's free
+        </a>
+        <span class="text-sm text-gray-400">Pro available — $12 one-time</span>
+      </div>
+
+      <!-- Trust badges -->
+      <div
+        class="mt-12 flex flex-wrap justify-center gap-6 text-sm text-gray-500"
+      >
+        <span class="flex items-center gap-1.5">
+          <svg
+            class="h-4 w-4 text-green-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+          No account required
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg
+            class="h-4 w-4 text-green-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+          No watermarks ever
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg
+            class="h-4 w-4 text-green-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+          Works offline
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg
+            class="h-4 w-4 text-green-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+          No subscription
+        </span>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="bg-gray-50 py-20">
+      <div class="mx-auto max-w-5xl px-6">
+        <h2 class="mb-2 text-center text-3xl font-bold">Everything you need</h2>
+        <p class="mb-12 text-center text-gray-500">
+          Five tools. All private. Core features free forever.
+        </p>
+
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Merge -->
+          <div class="rounded-xl border border-gray-200 bg-white p-6">
+            <div
+              class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50"
+            >
+              <svg
+                class="h-5 w-5 text-brand-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </div>
+            <h3 class="mb-1 font-semibold">Merge PDFs</h3>
+            <p class="text-sm text-gray-500">
+              Combine multiple PDFs into one. Drag to reorder pages before
+              merging.
+            </p>
+            <span
+              class="mt-3 inline-block text-xs font-medium text-green-600"
+            >Free</span>
+          </div>
+
+          <!-- Split -->
+          <div class="rounded-xl border border-gray-200 bg-white p-6">
+            <div
+              class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50"
+            >
+              <svg
+                class="h-5 w-5 text-brand-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01"
+                />
+              </svg>
+            </div>
+            <h3 class="mb-1 font-semibold">Split PDFs</h3>
+            <p class="text-sm text-gray-500">
+              Extract pages by range, every N pages, or pick individual pages
+              into a new file.
+            </p>
+            <span
+              class="mt-3 inline-block text-xs font-medium text-green-600"
+            >Free</span>
+          </div>
+
+          <!-- Compress -->
+          <div class="rounded-xl border border-gray-200 bg-white p-6">
+            <div
+              class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50"
+            >
+              <svg
+                class="h-5 w-5 text-brand-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
+                />
+              </svg>
+            </div>
+            <h3 class="mb-1 font-semibold">Compress</h3>
+            <p class="text-sm text-gray-500">
+              Reduce PDF or image file size. Lossless for PDFs, adjustable
+              quality for images.
+            </p>
+            <span
+              class="mt-3 inline-block text-xs font-medium text-green-600"
+            >Free</span>
+          </div>
+
+          <!-- Convert -->
+          <div class="rounded-xl border border-gray-200 bg-white p-6">
+            <div
+              class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50"
+            >
+              <svg
+                class="h-5 w-5 text-brand-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                />
+              </svg>
+            </div>
+            <h3 class="mb-1 font-semibold">Convert</h3>
+            <p class="text-sm text-gray-500">
+              Images → PDF or PDF → images (PNG/JPEG). Each page extracted as a
+              high-res file.
+            </p>
+            <span
+              class="mt-3 inline-block text-xs font-medium text-green-600"
+            >Free</span>
+          </div>
+
+          <!-- OCR -->
+          <div
+            class="rounded-xl border border-brand-100 bg-white p-6 sm:col-span-2 lg:col-span-1"
+          >
+            <div
+              class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-600"
+            >
+              <svg
+                class="h-5 w-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+            </div>
+            <h3 class="mb-1 font-semibold">OCR — Searchable PDFs</h3>
+            <p class="text-sm text-gray-500">
+              Make scanned PDFs text-searchable using on-device Tesseract.
+              Printed and typed documents.
+            </p>
+            <span
+              class="mt-3 inline-block text-xs font-medium text-brand-600"
+            >Pro</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy section -->
+    <section class="mx-auto max-w-5xl px-6 py-20">
+      <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+        <div>
+          <h2 class="mb-4 text-3xl font-bold">Built for privacy.</h2>
+          <p class="mb-6 text-gray-500">
+            Every other PDF tool sends your files to a server. Ream doesn't.
+            All processing happens in your browser using WebAssembly — the same
+            technology that runs desktop apps at near-native speed.
+          </p>
+          <ul class="space-y-3 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <svg
+                class="mt-0.5 h-4 w-4 shrink-0 text-brand-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              Zero network requests during file operations — verifiable in
+              DevTools
+            </li>
+            <li class="flex items-start gap-2">
+              <svg
+                class="mt-0.5 h-4 w-4 shrink-0 text-brand-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              Only permission requested: <code class="rounded bg-gray-100 px-1 text-xs">storage</code> — to cache the OCR engine locally
+            </li>
+            <li class="flex items-start gap-2">
+              <svg
+                class="mt-0.5 h-4 w-4 shrink-0 text-brand-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              No analytics, no telemetry, no crash reporting
+            </li>
+            <li class="flex items-start gap-2">
+              <svg
+                class="mt-0.5 h-4 w-4 shrink-0 text-brand-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              Works fully offline after installation
+            </li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-gray-200 bg-gray-50 p-8">
+          <div class="mb-3 text-4xl">🔒</div>
+          <p class="font-semibold text-gray-900">The air-gap test</p>
+          <p class="mt-2 text-sm text-gray-500">
+            Open Ream, then disconnect from the internet. Every feature still
+            works — including OCR. Your files were never going anywhere anyway.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="bg-gray-50 py-20">
+      <div class="mx-auto max-w-5xl px-6">
+        <h2 class="mb-2 text-center text-3xl font-bold">Simple pricing</h2>
+        <p class="mb-12 text-center text-gray-500">
+          No subscriptions. No surprises.
+        </p>
+
+        <div class="mx-auto grid max-w-2xl gap-6 sm:grid-cols-2">
+          <!-- Free -->
+          <div class="rounded-2xl border border-gray-200 bg-white p-8">
+            <p class="text-sm font-medium text-gray-500">Free</p>
+            <p class="mt-2 text-4xl font-bold">$0</p>
+            <p class="mt-1 text-sm text-gray-500">forever</p>
+            <ul class="mt-6 space-y-3 text-sm text-gray-600">
+              <li class="flex items-center gap-2">
+                <svg
+                  class="h-4 w-4 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Merge PDFs
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="h-4 w-4 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Split PDFs
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="h-4 w-4 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Compress PDFs &amp; images
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="h-4 w-4 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Convert images ↔ PDF
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="h-4 w-4 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Files up to 50 MB
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="mt-8 block rounded-lg border border-gray-200 py-2.5 text-center text-sm font-medium text-gray-700 hover:bg-gray-50"
+            >
+              Add to Chrome
+            </a>
+          </div>
+
+          <!-- Pro -->
+          <div
+            class="rounded-2xl border border-brand-600 bg-brand-600 p-8 text-white"
+          >
+            <p class="text-sm font-medium text-brand-100">Pro</p>
+            <p class="mt-2 text-4xl font-bold">$12</p>
+            <p class="mt-1 text-sm text-brand-200">one-time, no subscription</p>
+            <ul class="mt-6 space-y-3 text-sm text-brand-100">
+              <li class="flex items-center gap-2">
+                <svg
+                  class="h-4 w-4 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Everything in Free
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="h-4 w-4 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                OCR → searchable PDF
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="h-4 w-4 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Batch processing
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="h-4 w-4 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Files larger than 50 MB
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="mt-8 block rounded-lg bg-white py-2.5 text-center text-sm font-medium text-brand-600 hover:bg-brand-50"
+            >
+              Get Pro
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-100 py-8">
+      <div
+        class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-6 text-sm text-gray-400 sm:flex-row"
+      >
+        <span>© 2026 Ream</span>
+        <div class="flex gap-6">
+          <a href="privacy.html" class="hover:text-gray-600">Privacy Policy</a>
+          <a href="mailto:neek.by@gmail.com" class="hover:text-gray-600"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

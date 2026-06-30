@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Ream</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#eef2ff",
+                100: "#e0e7ff",
+                500: "#6366f1",
+                600: "#4f46e5",
+                700: "#4338ca",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white text-gray-900 antialiased">
+    <!-- Nav -->
+    <header class="border-b border-gray-100">
+      <div
+        class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4"
+      >
+        <a href="index.html" class="text-xl font-bold tracking-tight">Ream</a>
+        <nav class="flex items-center gap-6">
+          <a
+            href="index.html"
+            class="text-sm text-gray-500 hover:text-gray-900"
+            >← Back</a
+          >
+          <a
+            href="#"
+            class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700"
+          >
+            Add to Chrome — free
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="mx-auto max-w-2xl px-6 py-16">
+      <h1 class="mb-2 text-3xl font-bold">Privacy Policy</h1>
+      <p class="mb-12 text-sm text-gray-400">Last updated: June 2026</p>
+
+      <div class="space-y-10 text-gray-700">
+        <section>
+          <h2 class="mb-3 text-lg font-semibold text-gray-900">
+            The short version
+          </h2>
+          <p>
+            Ream processes your files entirely on your device. Your files are
+            never uploaded, transmitted, or shared with anyone — including us.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-3 text-lg font-semibold text-gray-900">
+            What data we collect
+          </h2>
+          <p class="mb-3">
+            <strong>None.</strong> Ream collects no personal data whatsoever.
+          </p>
+          <ul class="space-y-1.5 pl-4">
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-gray-400">—</span> No analytics or telemetry
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-gray-400">—</span> No crash reporting
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-gray-400">—</span> No usage tracking
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-gray-400">—</span> No advertising identifiers
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="mb-3 text-lg font-semibold text-gray-900">
+            How your files are handled
+          </h2>
+          <p class="mb-3">
+            All PDF and image processing happens locally in your browser using
+            WebAssembly. Your files are read from your disk, processed in
+            memory, and the output is saved back to your disk. At no point does
+            any file content leave your device.
+          </p>
+          <p>
+            You can verify this yourself: open Chrome DevTools (F12), go to the
+            Network tab, and run any Ream operation. You will see zero outbound
+            requests carrying file data.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-3 text-lg font-semibold text-gray-900">Permissions</h2>
+          <p class="mb-3">Ream requests only one browser permission:</p>
+          <ul class="space-y-1.5 pl-4">
+            <li class="text-sm">
+              <code
+                class="rounded bg-gray-100 px-1.5 py-0.5 text-xs text-gray-700"
+                >storage</code
+              >
+              — used solely to cache the OCR engine (WASM binary + language
+              data) so it does not need to reload on every use. No file content
+              is stored.
+            </li>
+          </ul>
+          <p class="mt-3 text-sm">
+            Ream has one host permission for
+            <code
+              class="rounded bg-gray-100 px-1.5 py-0.5 text-xs text-gray-700"
+              >extensionpay.com</code
+            >
+            — used only to verify your one-time Pro license. No file data is
+            sent to this service.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-3 text-lg font-semibold text-gray-900">
+            Pro license (ExtensionPay)
+          </h2>
+          <p>
+            If you purchase Ream Pro, payment is processed by
+            <a
+              href="https://extensionpay.com"
+              rel="noopener"
+              class="text-brand-600 underline hover:text-brand-700"
+              >ExtensionPay</a
+            >
+            (via Stripe). ExtensionPay receives your email and payment
+            information to manage your license. Ream itself only checks whether
+            your license is active — it never sees payment details.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-3 text-lg font-semibold text-gray-900">
+            Local storage
+          </h2>
+          <p>
+            Ream uses Chrome's
+            <code
+              class="rounded bg-gray-100 px-1.5 py-0.5 text-xs text-gray-700"
+              >storage</code
+            >
+            API to cache the Tesseract OCR WASM binary and English language
+            model so they load quickly on subsequent uses. This data is stored
+            locally on your device and never transmitted anywhere.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-3 text-lg font-semibold text-gray-900">
+            Third-party code
+          </h2>
+          <p>
+            Ream bundles open-source libraries (pdf-lib, pdf.js, Tesseract.js).
+            These libraries run entirely locally — they make no independent
+            network connections.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-3 text-lg font-semibold text-gray-900">
+            Changes to this policy
+          </h2>
+          <p>
+            If we ever change this policy, we will update the date above and
+            post the new version here.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-3 text-lg font-semibold text-gray-900">Contact</h2>
+          <p>
+            Questions? Email
+            <a
+              href="mailto:neek.by@gmail.com"
+              class="text-brand-600 underline hover:text-brand-700"
+              >neek.by@gmail.com</a
+            >.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-100 py-8">
+      <div
+        class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-6 text-sm text-gray-400 sm:flex-row"
+      >
+        <span>© 2026 Ream</span>
+        <div class="flex gap-6">
+          <a href="privacy.html" class="hover:text-gray-600">Privacy Policy</a>
+          <a href="mailto:neek.by@gmail.com" class="hover:text-gray-600"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
