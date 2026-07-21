@@ -1,0 +1,10 @@
+{
+  "name": "ream-landing",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./input.css -o ./styles.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3"
+  }
+}
